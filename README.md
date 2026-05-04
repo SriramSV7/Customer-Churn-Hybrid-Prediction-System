@@ -5,22 +5,22 @@ This project is an end-to-end machine learning system that predicts customer chu
 It uses a hybrid approach by integrating Sentiment Analysis (NLP) with traditional features, improving predictive performance and making the model more realistic for real-world scenarios.
 
 🚀 Key Highlights
-Hybrid Modeling Approach
+1. Hybrid Modeling Approach
 Combines tabular features (tenure, contract type, charges) with a SentimentScore derived from customer feedback using VADER.
 
-Feature Engineering with NLP
+2. Feature Engineering with NLP
 Extracted sentiment polarity from text data to capture customer satisfaction signals.
 
-Handling Class Imbalance
+3. Handling Class Imbalance
 Applied SMOTE to balance churn vs non-churn classes.
 
-Model Selection
+4. Model Selection
 Used XGBoost, which performs well on structured data and handles non-linearity effectively.
 
-End-to-End Pipeline
+5. End-to-End Pipeline
 Includes preprocessing pipeline (preprocessor.pkl) and trained model (churn_model.pkl) for consistent inference.
 
-Deployment Ready
+6. Deployment Ready
 Built a Streamlit web app for real-time churn prediction.
 
 🛠️ Tech Stack
@@ -39,10 +39,10 @@ F1 Score (Churn)	0.68
 👉 The model achieves balanced performance, especially improving recall for churn prediction.
 
 🧩 How It Works
-User inputs customer details + optional feedback
-Feedback is processed using VADER → SentimentScore
-Data is passed through preprocessing pipeline
-Model predicts churn probability
+1. User inputs customer details + optional feedback
+2. Feedback is processed using VADER → SentimentScore
+3. Data is passed through preprocessing pipeline
+4. Model predicts churn probability
 
 📂 Project Structure
 Customer_Churn.ipynb → Data cleaning, feature engineering, SMOTE, model training
