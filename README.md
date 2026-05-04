@@ -1,6 +1,56 @@
-# Customer-Churn-Hybrid-Prediction-System
-This repository contains an end-to-end data science workflow—from raw data ingestion and NLP-based feature engineering to model deployment using Streamlit. The model achieves an accuracy of approximately 82% by leveraging XGBoost and VADER Sentiment Analysis.
-This repository features an end-to-end Machine Learning project that predicts customer churn by combining tabular behavioral data with NLP-based sentiment analysis of customer feedback.
-🚀 Project HighlightsHybrid Approach: Integrates traditional features (tenure, contract type) with a SentimentScore derived from raw text using NLTK’s VADER lexicon.Imbalance Management: Uses SMOTE (Synthetic Minority Over-sampling Technique) to handle class imbalance between churned and retained customers.Production Ready: Includes a serialized preprocessor.pkl and churn_model.pkl for immediate deployment.Interactive Dashboard: A built-in Streamlit application allows for real-time churn risk assessment.
-🛠️ Tech StackData Handling: Pandas, NumPyNLP: NLTK (VADER), Regular ExpressionsMachine Learning: XGBoost, Scikit-LearnDeployment: Streamlit, Joblib📊 Model PerformanceThe hybrid XGBoost model achieves an accuracy of approximately 82.19%.MetricScoreAccuracy82.19%Precision (Churn)0.65Recall (Churn)0.72F1-Score (Churn)0.68
-📂 Project StructureCustomer_Churn.ipynb: Notebook containing data cleaning, NLP processing, SMOTE implementation, and model training.churn_app.py: A Streamlit script that provides a web-based UI for manual data entry and prediction.preprocessor.pkl: The fitted Scikit-Learn pipeline (StandardScaler & OneHotEncoder).churn_model.pkl: The trained XGBoost classifier.
+📌 Overview
+
+This project is an end-to-end machine learning system that predicts customer churn by combining structured behavioral data with unstructured text data (customer feedback).
+
+It uses a hybrid approach by integrating Sentiment Analysis (NLP) with traditional features, improving predictive performance and making the model more realistic for real-world scenarios.
+
+🚀 Key Highlights
+Hybrid Modeling Approach
+Combines tabular features (tenure, contract type, charges) with a SentimentScore derived from customer feedback using VADER.
+
+Feature Engineering with NLP
+Extracted sentiment polarity from text data to capture customer satisfaction signals.
+
+Handling Class Imbalance
+Applied SMOTE to balance churn vs non-churn classes.
+
+Model Selection
+Used XGBoost, which performs well on structured data and handles non-linearity effectively.
+
+End-to-End Pipeline
+Includes preprocessing pipeline (preprocessor.pkl) and trained model (churn_model.pkl) for consistent inference.
+
+Deployment Ready
+Built a Streamlit web app for real-time churn prediction.
+
+🛠️ Tech Stack
+Data Processing: Pandas, NumPy
+NLP: NLTK (VADER Sentiment Analysis)
+Machine Learning: XGBoost, Scikit-learn
+Deployment: Streamlit, Joblib
+
+📊 Model Performance
+Metric	Score
+Accuracy	82.19%
+Precision (Churn)	0.65
+Recall (Churn)	0.72
+F1 Score (Churn)	0.68
+
+👉 The model achieves balanced performance, especially improving recall for churn prediction.
+
+🧩 How It Works
+User inputs customer details + optional feedback
+Feedback is processed using VADER → SentimentScore
+Data is passed through preprocessing pipeline
+Model predicts churn probability
+
+📂 Project Structure
+Customer_Churn.ipynb → Data cleaning, feature engineering, SMOTE, model training
+churn_app.py → Streamlit app for real-time prediction
+preprocessor.pkl → Fitted preprocessing pipeline
+churn_model.pkl → Trained XGBoost model
+
+🎯 Key Insight
+
+Customer sentiment plays a significant role in churn prediction.
+Incorporating NLP features improved the model’s ability to capture customer dissatisfaction patterns.
